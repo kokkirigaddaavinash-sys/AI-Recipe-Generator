@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Recipe Generator | Flask + Gemini AI</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>🍳 AI Recipe Generator</h1>
+
+        <p class="subtitle">
+            Enter the ingredients you have and let AI create a delicious recipe for you.
+        </p>
+
+        <input
+            type="text"
+            id="ingredients"
+            placeholder="Example: Tomato, Onion, Egg..."
+        >
+
+        <div class="buttons">
+
+            <button onclick="generateRecipe()">
+                ✨ Generate Recipe
+            </button>
+
+            <button onclick="clearRecipe()" class="clear-btn">
+                ❌ Clear
+            </button>
+
+        </div>
+
+        <div id="result"></div>
+
+        <footer>
+            Made with ❤️ using Flask & Gemini AI
+        </footer>
+
+    </div>
+
+    <!-- JavaScript -->
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
